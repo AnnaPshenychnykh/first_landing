@@ -1,0 +1,31 @@
+.recomended {
+  &__products {
+    @include pageGrid;
+    // display: grid;
+    row-gap: 40px;
+
+    // @include onTablet {
+    //   justify-items: center;
+    // }
+
+    // @include onTablet {
+    //   row-gap: 48px;
+    // }
+    // @include onDesktop {
+    //   justify-items: stretch;
+    //   grid-template-columns: repeat(3, 1fr);
+    //   column-gap: 24px;
+    // }
+  }
+
+  &__product {
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 2 / -2;
+    }
+    @include onDesktop {
+      grid-column: span 4;
+    }
+  }
+}

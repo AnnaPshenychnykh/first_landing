@@ -1,0 +1,50 @@
+.header {
+  background-image: url(../images/Cover_photo3x.png);
+  background-size: cover;
+  background-position: right;
+
+  
+
+  &__contant {
+    // box-sizing: border-box;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    // @include contentPaddingInline;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__title {
+    margin: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 100%; 
+    letter-spacing: -1.5px;
+
+    @include onTablet {  //new
+      font-size: 64px;
+    }
+    @include onDesktop {  //new
+      font-size: 80px;
+    }
+  }
+  
+  &__bottom {
+    padding-bottom: 88px;
+
+    @include onTablet {
+      padding-bottom: 130px;  //new
+    }
+  }
+}
